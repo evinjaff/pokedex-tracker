@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "target": "es5",
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "watch": true,
+      "lib": ["es6", "DOM"],
+      "downlevelIteration": true
+    },
+    "files": [
+        "apihandler.ts"
+    ]
+  }

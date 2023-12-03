@@ -1,0 +1,195 @@
+
+/* @import url('http://fonts.cdnfonts.com/css/pokemon-solid'); */
+
+/* TODO: Add more font formats for extra legacy features */
+/* @font-face {
+    font-family: "EarthBound";
+    src: url('https://github.com/evinjaff/evinjaff.github.io/blob/master/fonts/EBMain.woff2?raw=true'),
+        url('https://github.com/evinjaff/evinjaff.github.io/blob/master/fonts/EBMain.ttf?raw=true');
+} */
+
+@font-face {
+    font-family: "EarthBound";
+    src: url('fonts/EBMain.ttf'),
+        url('fonts/EBMain.woff2') format('woff');
+}
+
+/* latin */
+@font-face {
+    font-family: 'EarthBoundLatin';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(fonts/EBMain.woff2) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+
+body {
+    background-color: rgb(0, 48, 114);
+    background-image: url('img/pokedex.png');
+    background-repeat: repeat-y;
+    background-size: contain;
+    font-family: "EarthBoundLatin";
+
+    color: white;
+
+    font-size: large;
+}
+
+#displaybox {
+    position: fixed;
+    width: 25%;
+}
+
+/* Referened: https://stackoverflow.com/questions/27501127/square-gradient-background-image-corner-radius-and-transparency */
+#masthead{
+   color: whitesmoke;
+   background-color:  rgba(36, 200, 118, 1.0);
+
+   position: fixed;
+
+   /* height: 8em; */
+   width: 100%;
+   height: 7%;
+   -webkit-box-shadow: inset 0 0 5px 2px rgba(28, 128, 68, 1.0);
+   box-shadow: inset 0 0 5px 2px  rgba(28, 128, 68, 1.0);
+
+   z-index: 10;
+
+}
+
+/* #share{
+    display: inline;
+} */
+
+#main_app {
+    margin-top: 5%
+}
+
+h1 {
+    display: inline;
+}
+
+#reset{
+    /* float: left; */
+    /* width: 33%; */
+    height: 40%;
+    margin-left: 2%;
+    margin-top: 0.5%;
+}
+
+#share{
+    /* float: right; */
+    /* width: 33%; */
+    height: 40%;
+    margin-right: 2%;
+    margin-top: 0.5%;
+}
+
+
+#catch_loading_placeholder {
+    background: url('img/loading.gif') no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
+
+#pokemon_catch_lookup {
+
+    /* column-width: auto;
+    column-count: 2;
+    break-inside: avoid-column; */
+
+    height: 100%;
+}
+
+/* https:https://www.geeksforgeeks.org/how-to-prevent-column-break-within-an-element/#:~:text=We%20can%20prevent%20column%20break,inside%20Property%20set%20to%20avoid. */
+
+#pokemon_catch_lookup * {
+    break-inside: avoid;
+}
+
+.toggle-content {
+	display: none;
+	height: 0;
+	overflow: hidden;
+	transition: height 350ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+	display: block;
+	height: auto;
+}
+
+.pokemon_info_container {
+    display: inline;
+    flex: 1 0 31%;
+}
+
+.visible_pokemon_region {
+    display: inline;
+}
+
+.pokemonDetails {
+    /* Used: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+.pokemonDetails.show {
+    opacity: 1;
+    height: auto;
+}
+
+
+#title {
+    font-size: 250%;
+}
+
+.pokemon-number * {
+    width: 30%;
+}
+
+/* Referenced my old CSS: https:https://github.com/evinjaff/FESOV-randomizer/blob/master/stylesheet.css */
+.pokemonDetails {
+    display: none;
+
+
+
+}
+
+#catchbar{
+
+}
+
+/* .pokemonDetails > * {
+    position: absolute;
+} */
+
+#reset figure {
+    /* width: 33%; */
+    /* float: right; */
+    margin: auto;
+    text-align: center;
+    padding: 0;
+}
+
+#share figure {
+    /* width: 33%;
+    float: left; */
+    margin: auto;
+    text-align: center;
+    padding: 0;
+}
+
+.pokemondetailtitle{
+    font-size: xx-large;
+}
